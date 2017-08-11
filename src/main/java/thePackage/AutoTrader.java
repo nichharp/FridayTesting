@@ -77,6 +77,24 @@ public class AutoTrader {
     private WebElement plant;
     public void plantButt() {plant.click();}
 
+    @FindBy(xpath = "//*[@id=\'home\']/div[6]/footer/div/nav[1]/section[1]/ul/li[4]/a")
+    private WebElement contactUs;
+    public void contacUsButt(){contactUs.click();}
+
+    @FindBy(xpath = "//*[@id=\'js-contactus__page--options-review-enquiries\']/p[1]")
+    private WebElement reviewEnquires;
+    public void enquireButt() {reviewEnquires.click();}
+
+    @FindBy(xpath = "//*[@id=\'js-contactus__page--gethelp-review-enquiriestab\']/div[3]/span")
+    private WebElement getintouch;
+    public void getInTouchButt(){getintouch.click();}
+
+    @FindBy(xpath = "//*[@class = 'contactus__page--contact-text lh-16 mb-2']")
+    private WebElement write;
+    public void writeLetterButt(){write.click();}
+
+
+
 
 
 
