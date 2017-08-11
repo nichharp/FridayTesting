@@ -72,4 +72,16 @@ public class AutoTrader {
     @FindBy(xpath = "//*[@id=\'ursSignoutForm\']/button")
     private WebElement signout;
     public void signoutButt(){signout.click();}
+
+    @FindBy(xpath = "//*[@id=\'home\']/div[6]/footer/div/nav[3]/section/ul/li[6]/a")
+    private WebElement plant;
+    public void plantButt() {plant.click();}
+
+
+
+
+
+
+
+
 }

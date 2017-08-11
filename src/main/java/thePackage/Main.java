@@ -86,12 +86,16 @@ public class Main {
 //        autoTrader.enterMilage(row.get(4));
 //        autoTrader.getEvaluation();
 //
+//
 //        try {
 //            test.addScreenCaptureFromPath(screenshot.take(webDriver, "take1")); //because take returns a filepath!!!!
 //        } catch (IOException e) {
 //            e.fillInStackTrace();
 //        }
-//        if (webDriver.findElement(By.xpath("/html/body/div[1]/div/section[1]/div/section/span/text()")).getText() == "Not your car?" ) { //sort out the assert statement
+//
+//        System.out.println(row.get(3));
+//        System.out.println(webDriver.findElement(By.xpath("/html/body/div[1]/div/section[1]/div/section/table[1]/tbody/tr[1]/td[2]/span")).getText());
+//        if (webDriver.findElement(By.xpath("/html/body/div[1]/div/section[1]/div/section/table[1]/tbody/tr[1]/td[2]/span")).getText().equals(row.get(3)) ) { //sort out the assert statement
 //            test.pass("Pass");
 //        } else {
 //            test.fail("Fail");
@@ -112,7 +116,7 @@ public class Main {
 //        mousey.moveToElement(webDriver.findElement(By.xpath("//*[@id=\'js-header-nav\']/ul/li[5]/div[1]/a/i"))).perform();
 //        autoTrader.signoutButt();
 //        System.out.println("did we do it?");
-//        if (webDriver.findElement(By.xpath("//*[@id=\'js-header-nav\']/ul/li[5]/div[2]/a")).getText() == "Sign in") { //sort out the assert statement
+//        if (webDriver.findElement(By.xpath("//*[@id=\'js-header-nav\']/ul/li[5]/div[2]/a")).getText().equals("Sign in")) { //sort out the assert statement
 //            System.out.println("we did it");
 //            test.pass("Pass");
 //        } else {
@@ -127,8 +131,29 @@ public class Main {
 //        }
 //
 //    }
-
-
+//
+//    @Test
+//    public void plantChecker() {
+//        Actions mousey = new Actions(webDriver);
+//        SheetReader sheetReader = new SheetReader("C:\\Users\\Administrator\\IdeaProjects\\TheTest\\src\\main\\resources\\TestWorksheet.xlsx");
+//        System.out.println("test started");
+//        List<String> row = sheetReader.readRow(4, "Sheet1");
+//        webDriver.navigate().to(row.get(2));
+//        autoTrader.plantButt();
+//
+//        System.out.println(webDriver.getCurrentUrl());
+//        if (webDriver.getCurrentUrl().equals( "http://plant.autotrader.co.uk/")) {
+//            System.out.println("we did it");
+//            test.pass("Pass");
+//        } else {
+//            System.out.println("We didnt do it");
+//            test.fail("Fail");
+//        }
+//
+//
+//
+//
+//    }
 
     @After
     public void aft(){
